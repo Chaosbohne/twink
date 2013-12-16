@@ -1,0 +1,55 @@
+<template name="detail">
+  <div class="modal-body">
+    <div class="container">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>      
+    </div>    
+    <div class="container">
+      <small>
+        <span class="author">{{username}}</span>
+        <span class="pull-right text-muted">{{timeMeasurement this.submitted}}</span>
+      </small>
+      <div class="container wordwrap">{{text}}</div>
+    </div>
+    <div class="container accordion-outer-controls">      
+      <div class="btn-group pull-right">
+        <button type="button" class="btn btn-primary btn-small" name="message">
+          <i class="glyphicon glyphicon-envelope"></i>
+        </button>         
+        <button type="button" class="btn {{isUpvote}} btn-small" name="upvote">
+          <i class="glyphicon glyphicon-thumbs-up"></i>
+          <span class="badge">{{votes}}</span>
+        </button>                 
+      </div>      
+    </div>
+    {{#isolate}}
+    <div class="container">
+      <form class="text-center">
+        <div class="control-group">
+          <div class="controls">
+            <textarea id="newComment" name="comment" class="autogrow  input-small form-control" rows="1" type="text" placeholder="Comment"></textarea>
+          </div>              
+        </div>                      
+      </form> 
+    </div>
+    {{/isolate}}
+    <hr>
+    <div class="container">
+      <ul class="list-unstyled comments">
+        {{#each comments}}
+          {{> comment}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="container">
+      {{#if commentsReady}}
+        {{#unless allCommentsLoaded}}
+          <button name='load-more' class="btn btn-primary pull-right">Load more</button>
+        {{/unless}}
+      {{else}}
+        <div class="progress progress-striped active">
+          <div class="progress-bar" style="width: 100%"></div>
+        </div>
+      {{/if}}    
+    </div>
+  </div>  
+</template>

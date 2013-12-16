@@ -1,0 +1,38 @@
+<template name="loginPage">
+  <div class="loginPage">
+    <div class="container">
+      {{> loginorsignupPage}}
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="well text-center formContainer">
+            <form role="form">
+              <div class="form-group">
+                <h3>Login.</h3>
+              </div>
+              <div class="form-group">
+                <label class="control-label form-label" for="inputUsername">Your username/email</label>
+                <input name="username-email" class="form-control" type="text" placeholder="Username/Email">   
+              </div>
+              <div class="form-group">
+                <label class="control-label form-label" for="inputPassword">Your password</label>
+                <input name="password" class="form-control" type="password" placeholder="Password">      
+              </div>
+              <div class="form-group">
+                {{#with hasError}}
+                  {{> error}}
+                {{/with}}                        
+              </div>
+              <div class="form-group">
+                <div class="form-btn">
+                  <button type="submit" class="btn btn-lg btn-success">Login</button>
+                  or
+                  <a href="{{signupPagePath}}" class="btn btn-info">Signup</a>
+                </div>
+              </div>
+            </form>     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

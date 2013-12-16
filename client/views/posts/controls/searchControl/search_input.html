@@ -1,0 +1,17 @@
+<template name="searchInput">
+  <span name="searchInput"> 
+      <span class="input-group">
+        <input name="location" class="form-control" value="" type="text" placeholder="Abbey Road, London, UK">
+        <span class="input-group-btn">          
+          {{#if hasGeoSupport}}
+            <button name="locate" class="btn btn-primary" type="button">
+              <i class="glyphicon glyphicon-globe"></i>
+            </button>        
+          {{/if}}         
+          <button name="search" class="btn btn-primary" type="button">
+            <i class="glyphicon glyphicon-search"></i>
+          </button> 
+        </span>        
+      </span>      
+  </span>  
+</template>

@@ -1,0 +1,27 @@
+<template name="verifyPageNotification">
+  <div class="verifyPageNotification">
+    <div class="container">
+      {{> loginorsignupPage}}
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="well text-center formContainer">
+            <form role="form">
+              <div class="form-group">
+                <h3>We send you an Email.</h3>
+                <p class="control-label form-label">Click the link in your Email to get access to Twinkle.</p>
+                <p> </p>
+              </div>
+              <div class="form-group">     
+                <div class="form-btn">
+                  <a href="{{signupPagePath}}" class="btn btn-info">Signup</a>
+                  or
+                  <a href="{{loginPagePath}}" class="btn btn-info">Login</a>
+                </div>          
+              </div>        
+            </form>    
+          </div>            
+        </div>            
+      </div>          
+    </div>
+  </div>
+</template>

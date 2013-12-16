@@ -1,0 +1,17 @@
+/*searchControl */
+#searchControl .input-group{
+  -webkit-box-shadow: 5px 10px 23px 2px rgba(0, 0, 0, 0.3); /* WebKit */
+  -moz-box-shadow: 5px 10px 23px 2px rgba(0, 0, 0, 0.3); /* Firefox */
+  box-shadow: 5px 10px 23px 2px rgba(0, 0, 0, 0.3); /* Standard */
+}
+/* clear orange focus color on buttons */
+#searchControl .input-group button{
+  outline-color: transparent;
+}
+
+/*control*/
+#searchControl{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: -5px;
+}

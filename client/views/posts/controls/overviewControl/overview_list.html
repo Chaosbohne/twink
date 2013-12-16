@@ -1,0 +1,15 @@
+<template name="overviewList">
+  <div class="overviewCopyrightSpacer">
+    {{#if isVisible}}      
+      <div class="overviewWrapper">
+        <ul  class="horizontal-slide">
+          {{#each posts}}
+            {{> overview}}
+          {{/each}}
+        </ul>
+      </div> 
+    {{/if}}        
+    <div class="overviewSpacer">
+    </div> 
+  </div>
+</template>

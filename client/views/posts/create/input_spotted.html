@@ -1,0 +1,21 @@
+<template name="inputSpotted">
+  <div id="inputSpotted" name="inputSpotted">
+    <form>
+      <div class="control-group">
+        <label class="control-label form-label" for="inputText">You missed your chance to get to know someone? Here's your second one.</label>
+        <div class="controls">
+          <textarea name="posttext" class="form-control" rows="8" placeholder="I saw your azure eyes and felt in love ...."></textarea>
+        </div>
+      </div>
+      {{#with error}}
+        {{> error}}
+      {{/with}}      
+      <div class="control-group text-right">
+        <div class="form-btn">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+          <button type="submit" name="submit" class="btn btn-primary">Post spotted</button>
+        </div>
+      </div>      
+    </form>    
+  </div>
+</template>
